@@ -75,7 +75,7 @@ The objective of this project is to research and evaluate the various enterprise
 > - Visual Studio Code 
 
 ## DevSecOps 
-![DevSecOps](/img/devsecops.png)
+![DevSecOps](./img/DevSecOps.png)
 
 DevOps is a set of practices that works to automate and integrate the processes between software development and IT teams, so they can build, test, and release software faster and more reliably.
 The term DevOps was formed by combining the words “development” and “operations” and signifies a cultural shift that bridges the gap between development and operation teams, which historically functioned in siloes. 
@@ -110,7 +110,7 @@ GitLab is a complete DevOps platform, delivered as a single application that doe
 the DevSecOps toolchain for improved quality, security and developer productivity. 
 
 Other vendors offer a kit plane you have to assemble yourself, GitLab is a type certified aircraft.
-![Toolchain](./img/toolchain.PNG)
+![Toolchain](./img/Toolchain.PNG)
 
 [**Manage**](https://about.gitlab.com/stages-devops-lifecycle/manage/)
 
@@ -410,7 +410,7 @@ Each use case is used to demonstrate different DevSecOps features and workflow b
 1. Before configuring the CI/CD pipeline, we need to create a project.
 2. Go to [GitLab Website](https://gitlab.com/users/sign_in) and sign in / register if you don't have an account. 
    
-    ![GitLab Sign In](./img/sign-in.PNG)
+    ![GitLab Sign In](./img/Sign-In.PNG)
 3. To start with DevOps on your project, you need a repository. Click the **New Project** Button at top right corner. Then, select the choice based on your needs from the following:
   
          - Create Blank Project
@@ -418,12 +418,12 @@ Each use case is used to demonstrate different DevSecOps features and workflow b
          - Import Project
          - Run CI/CD for external repository 
   
-    ![GitLab Projects](./img/create-new-project.PNG)
+    ![GitLab Projects](./img/Create-New-Project.PNG)
 4. Where in our case, we just need to create a blank project. Once the project is created, you can start on your project directly from GitLab IDE / GitPod or upload your files **one by one** or you can refer to the **NOTE** below.
    
     So in our case, we will just download the project files from Github and clone our newly created repository using git client of your choice, add the files to the local repository and then push back to the remote repository.
 
-    ![Repo](./img/repo.PNG)
+    ![Repo](./img/Repo.PNG)
 
 > **NOTE** : To upload multiple files on your GitLab repository, you will need to download an external git client like Source Tree, GitKraken, and GitHub Desktop, connect to your GitLab account, clone the repository to your PC, add your files to the local repository, then push back to the remote repository. 
 
@@ -434,8 +434,8 @@ AndroGoat is purposely developed open source vulnerable/insecure app using Kotli
 
 ### CI/CD Configuration - AndroGoat
 1. To start on CI/CD configuration, you can simply click the ```Set Up CI/CD``` button in the UI under Project overview -> Details, then it will navigate to CI/CD editor click on ```Create new CI/CD pipeline``` and it will create a ```.gitlab-ci.yml``` file which is used for CI/CD pipeline configuration.
-   ![CI/CD](./img/set-up.PNG)
-   ![CI/CD](./img/cicd.PNG)
+   ![CI/CD](./img/Set-Up.PNG)
+   ![CI/CD](./img/CICD.PNG)
 
    Once created, you can directly edit using the editor provider. If you don't know how to start, you can look at some of these [templates](https://docs.gitlab.com/ee/ci/examples/README.html#cicd-templates) provided by GitLab.
 
@@ -733,8 +733,8 @@ most web applications. It also contains lessons that specifically pertain to the
 
 ### CI/CD Configuration - WebGoat.NET
 1. Ensure you have read the [GitLab CI/CD](#gitlab-cicd) before starting with the CI/CD configuration. To start on CI/CD configuration, you can simply click the ```Set Up CI/CD``` button in the UI under Project overview > Details, then it will navigate to CI/CD editor click on ```Create new CI/CD pipeline``` and it will create a ```.gitlab-ci.yml``` file which is used for CI/CD pipeline configuration.
-   ![CI/CD](./img/set-up.PNG)
-   ![CI/CD](./img/cicd.PNG)
+   ![CI/CD](./img/Set-Up.PNG)
+   ![CI/CD](./img/CICD.PNG)
 
    Once created, you can directly edit using the editor provider. If you don't know how to start, you can look at some of these [templates](https://docs.gitlab.com/ee/ci/examples/README.html#cicd-templates) provided by GitLab.
 
@@ -860,8 +860,8 @@ VAmPI is a vulnerable API made with Flask and it includes vulnerabilities from t
 
 ### CI/CD Configuration - VAmPI
 1. Ensure you have read the [GitLab CI/CD](#gitlab-cicd) before starting with the CI/CD configuration. To start on CI/CD configuration, you can simply click the ```Set Up CI/CD``` button in the UI under Project overview -> Details, then it will navigate to CI/CD editor click on ```Create new CI/CD pipeline``` and it will create a ```.gitlab-ci.yml``` file which is used for CI/CD pipeline configuration.
-   ![CI/CD](./img/set-up.PNG)
-   ![CI/CD](./img/cicd.PNG)
+   ![CI/CD](./img/Set-Up.PNG)
+   ![CI/CD](./img/CICD.PNG)
 
    Once created, you can directly edit using the editor provider. If you don't know how to start, you can look at some of these [templates](https://docs.gitlab.com/ee/ci/examples/README.html#cicd-templates) provided by GitLab.
 
@@ -1107,8 +1107,8 @@ We will be using this project to demonstrate the full DevSecOps workflow.
 
 ### CI/CD Configuration - NodeGoat
 1. Ensure you have read the [GitLab CI/CD](#gitlab-cicd) before starting with the CI/CD configuration. To start on CI/CD configuration, you can simply click the ```Set Up CI/CD``` button in the UI under Project overview -> Details, then it will navigate to CI/CD editor click on ```Create new CI/CD pipeline``` and it will create a ```.gitlab-ci.yml``` file which is used for CI/CD pipeline configuration.
-   ![CI/CD](./img/set-up.PNG)
-   ![CI/CD](./img/cicd.PNG)
+   ![CI/CD](./img/Set-Up.PNG)
+   ![CI/CD](./img/CICD.PNG)
 
    Once created, you can directly edit using the editor provider. If you don't know how to start, you can look at some of these [templates](https://docs.gitlab.com/ee/ci/examples/README.html#cicd-templates) provided by GitLab.
 
