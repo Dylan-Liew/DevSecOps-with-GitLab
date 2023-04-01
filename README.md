@@ -126,7 +126,8 @@ GitLab helps teams design, develop and securely manage code and project data fro
 
 [**Verify**](https://about.gitlab.com/stages-devops-lifecycle/verify/)
 
-GitLab helps delivery teams fully embrace continuous integration to automate the builds, integration and verification of their code. GitLab’s industry leading CI capabilities enables automated testing, Static Analysis Security Testing, Dynamic Analysis Security testing and code quality analysis to provide fast feedback to developers and testers about the quality of their code. With pipelines that enable concurrent testing and parallel execution, teams quickly get insight about every commit, allowing them to deliver higher quality code faster.
+GitLab helps delivery teams fully embrace continuous integration to automate the builds, integration and verification of their code. GitLab’s industry leading CI capabilities enables automated testing, Static Analysis Security Testing, Dynamic Analysis Security testing and code quality analysis to provide fast feedback to developers and testers about the quality of their code. With 
+s that enable concurrent testing and parallel execution, teams quickly get insight about every commit, allowing them to deliver higher quality code faster.
 
 [**Package**](https://about.gitlab.com/stages-devops-lifecycle/package/)
 
@@ -328,14 +329,12 @@ Once we configure any one of the security scanner, we will be able to view the v
 
 ### Pipeline Security 
 At the pipeline level, the Security section displays the vulnerabilities present in the branch of the project the pipeline ran against.
-![Pipeline Security](./img/pipeline_security_dashboard.png)
 A pipeline consists of multiple jobs, including SAST and DAST scanning. If any job fails to finish for any reason, the security dashboard doesn’t show SAST scanner output. For example, if the SAST job finishes but the DAST job fails, the security dashboard doesn’t show SAST results. On failure, the analyzer outputs an exit code.
 
 ### Project Security Dashboard
 A project’s Security Dashboard displays a chart with the total number of vulnerabilities over time. It updates daily with up to 365 days of historical data. By default, it shows statistics for all vulnerability severities.
 
 To access the dashboard, from your project’s home page go to Security & Compliance > Security Dashboard.
-![Project Security Dashboard](./img/project_security_dashboard_chart.png)
 
 ### Vulnerability Report
 The Vulnerability Report provides information about vulnerabilities from scans of the branch most recently merged into the default branch. It is available for groups, projects, and the Security Center.
@@ -345,8 +344,6 @@ At all levels, the Vulnerability Report contains:
 - Totals of vulnerabilities per severity level.
 - Filters for common vulnerability attributes.
 - Details of each vulnerability, presented in tabular layout.
-  
-![Vulnerability Report](./img/group_vulnerability_report.png)
 
 ## GitLab Services
 The ```services``` keyword defines a Docker image that runs during a ```job``` linked to the Docker image that the image keyword defines. This allows you to access the service image during build time.
@@ -369,20 +366,16 @@ Jobs can output an archive of files and directories. This output is known as a j
 
 You can download job artifacts by using the [**API**](https://docs.gitlab.com/ee/api/job_artifacts.html#get-job-artifacts) or  the GitLab UI:
 
-- On the Pipelines page, to the right of the pipeline:
-![Job artifacts in Pipelines page](./img/job_artifacts_pipelines.png)
+- On the Pipelines page, to the right of the pipeline
 
-- On the Jobs page, to the right of the job:
-![Job artifacts in Jobs page](./img/job_artifacts_jobs_page.png)
+- On the Jobs page, to the right of the job
 
-- On a job’s detail page. The Keep button indicates an expire_in value was set:
-![Job artifacts browser button](./img/job_artifacts_browser_button.png)
+- On a job’s detail page. The Keep button indicates an expire_in value was set
 
-- On a merge request, by the pipeline details:
-![Job artifacts in merge request](./img/job_artifacts_merge_request.png)
+- On a merge request, by the pipeline details
 
-- When browsing an archive:
-![Job artifacts browser](./img/job_artifacts_browser.png)
+- When browsing an archive
+
 ## GitLab Pricing
 GitLab comes with three different plans: 
 - Free
@@ -559,9 +552,6 @@ Ensuring your project’s code stays simple, readable and easy to contribute to 
         - test
 
 - For more information, you can look at the [**Official Documentation**](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html).
-  
-- The result of code quality scan is shown below:
-  ![Gitlab Code Quality](./img/gitlab_code_quality.png)
 
 #### Static Application Security Test - AndroGoat
 If you’re using GitLab CI/CD, you can analyze your source code for known vulnerabilities using Static Application Security Testing (SAST). GitLab checks the SAST report and compares the found vulnerabilities between the source and target branches.
@@ -589,8 +579,6 @@ If you’re using GitLab CI/CD, you can analyze your source code for known vulne
 
 - For more information, you can read the [**Official Documentation**](https://docs.gitlab.com/ee/user/application_security/sast/).
 
-- The result of SAST is shown below:
-  ![Gitlab SAST](./img/gitlab_sast.png)
 #### Secret Detection - AndroGoat
 A recurring problem when developing applications is that developers may unintentionally commit secrets and credentials to their remote repositories. If other people have access to the source, or if the project is public, the sensitive information is then exposed and can be leveraged by malicious users to gain access to resources like deployment environments.
 
@@ -637,13 +625,9 @@ A recurring problem when developing applications is that developers may unintent
 - For more information, you can refer to the [**Official Documentation**](https://docs.gitlab.com/ee/user/application_security/secret_detection/).
 
 - To test out the secret detection, some sample secrets are added to the source code under ```app/src/androidTest/java/owasp/sat/agoat/ExampleInstrumentedTest.kt```
-![Secrets](./img/secrets.png)
-- Which can be detected as shown below:
-![Secret Detection](./img/gitlab_secret_detection.png)
 
 ### CI/CD Package Stage - AndroGoat
 The package job is simply giving the debug apk a proper name and putting it in a separate folder which was cached from assemble debug job. Then, You can download this apk through job artifacts by using the GitLab UI or the API. 
-![Package APK](./img/gitlab_package.png)
 
 - CI configuration for the package job :
 
@@ -720,9 +704,6 @@ Final ```.gitlab-ci.yml``` configuration:
       artifacts:
         paths:
         - AndroGoat-debug.apk
-
-Final pipeline:
-![Androgoat Pipeline](./img/androgoat_pipeline.png)
 
 ## WebGoat.NET - ASP.NET Web Application
 *GitHub Repository: [Link](https://github.com/jerryhoff/WebGoat.NET)*
@@ -848,9 +829,6 @@ Final ```.gitlab-ci.yml``` configuration:
       after_script:
         - docker logout registry.gitlab.com
 
-Final pipeline:
-![Webgoat.net Pipeline](./img/webgoat_pipeline.png)
-
 > **NOTE** : If a project is public, so is the Container Registry. To pull the image, you can use ```docker pull``` command with the link of the container image. For example, ```registry.gitlab.com/xxx/webgoat.net_devsecops:latest``` 
 
 ## VAmPI - Python Web API
@@ -958,8 +936,6 @@ To configure API fuzzing to use a Postman Collection file:
 > Although Postman can export environment variables into a JSON file, the format is not compatible with the JSON expected by ```FUZZAPI_POSTMAN_COLLECTION_VARIABLES```. 
 > 
 > As the postman collection use by VAmPI using environment variable for BaseURL as well, I created a ```variable-collection-dictionary.json``` under ```openapi_specs/ ```.
-![postman_collection](./img/postman_collection.png)
-![variable collection dictionary](./img/variable_collection_dict.png)
 
 6. Follow up from the following steps, this is the current configuration, 
    
@@ -1094,9 +1070,6 @@ Final ```.gitlab-ci.yml``` configuration:
     apifuzzer_fuzz:
       before_script:
         - python generate_token.py
-
-Final pipeline:
-![VAmPI Pipeline](./img/vampi_pipeline.png)
 
 ## NodeGoat - NodeJS Web Application
 *GitHub Repository: [Link](https://github.com/OWASP/NodeGoat)*
@@ -1272,9 +1245,6 @@ You can take advantage of License Compliance by either:
 
 The License Finder scan tool runs as part of the CI/CD pipeline, and detects the licenses in use. GitLab checks the License Compliance report, compares the licenses between the source and target branches, and shows the information right on the merge request. Denied licenses are indicated by a x red icon next to them as well as new licenses that need a decision from you. In addition, you can manually allow or deny licenses in your project’s license compliance policy section. If a denied license is detected in a new commit, GitLab blocks any merge requests containing that commit and instructs the developer to remove the license.
 
-The result of license scanning is shown below :
-![License](./img/gitlab_license_scanning.png)
-
 For more information, you can click [**HERE**](https://docs.gitlab.com/ee/user/compliance/license_compliance/).
 
 ### CI/CD Dast Stage - NodeGoat
@@ -1407,9 +1377,6 @@ To include the DAST template:
           # Register the user first, note this assumes the application is up and running for registration to succeed
           before_script: 
             - curl -v -d 'userName=$GOAT_USERNAME&firstName=test&lastName=test&password=$GOAT_PASSWORD&verify=$GOAT_PASSWORD&email=&_csrf=' "http://nodegoat:4000/signup"
-
-8. The result of DAST is shown below:
-   ![DAST](./img/gitlab_dast.png)
   
 ### CI/CD Deploy Stage - NodeGoat
 This stage does the deploy job to Azure Kubernetes Service.
@@ -1417,8 +1384,6 @@ This stage does the deploy job to Azure Kubernetes Service.
 > AKS and its dependent resources are created by another student through Azure CLI. There are different ways to create the AKS Cluster. You can use Azure Portal (User Interface) or Azure CLI (Command Line Interface) or Terraform (Infrastructure as Code) to create AKS Cluster and its dependent resources
 
 1. Knowing that our Azure Kubernetes Service is ready, we can connect GitLab to Azure Kubernetes Service for GitLab project Kubernetes integration. In your Gitlab project, navigate to Operations > Kubernetes > Integrate with a cluster certificate > Add Existing Cluster.
-
-    ![GitLab Kubernetes](./img/gitlab_kubernetes.png)
 
     Using this form, we will supply the credentials we need to reach our Kubernetes cluster.
 
@@ -1494,8 +1459,6 @@ This stage does the deploy job to Azure Kubernetes Service.
 
     I also make the deployment job manual by adding ```when: manual``` to its configuration. To deploy, you simply click on the play button in the pipeline. Once deployed, you can locate your deployment with ```kubectl get services -n gitlab-managed-apps``` and the IP address you can use to access the web application is the ```EXTERNAL_IP``` or obtain from Azure Portal.
 
-    ![AKS](./img/gitlab_aks.png)
-
 > **NOTE** : The kubernetes deployment and service yaml file require you to write yourself if it wasn't provided where in my case i leverage the use of kompose to convert docker-compose script to kubernetes yaml file which includes the deployment for the application and MongoDB as well as service for the application and the MongoDB. Some editing is required as it only provides you an template to start on the configuration.
 
 Final configuration for deployment:
@@ -1514,9 +1477,7 @@ Final configuration for deployment:
         - kubectl apply -f ./kubernetes/mongo-deployment.yaml,./kubernetes/mongo-service.yaml,./kubernetes/web-deployment.yaml,./kubernetes/web-service.yaml
         - kubectl set image deployment/web web=$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
       when: manual
-
-The Deployment is shown below:
-![NodeGoat Deployment](./img/gitlab_deployment.png)
+      
 ### Conclusion - NodeGoat
 Once the CI/CD is configured, the pipeline will runs whenever there is a new change in source code/merge request in the project. The configuration and pipeline are shown below:
 
@@ -1622,10 +1583,6 @@ Final ```.gitlab-ci.yml``` configuration:
             - kubectl set image deployment/web web=$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
           when: manual
 
-
-Final pipeline:
-![NodeGoat Pipeline](./img/nodegoat_pipeline.png)
-
 # Improvements
 - Explore GitLab AutoDevOps feature
 - DAST API can be added to VAmPI pipeline (New Feature for GitLab 14.0)
@@ -1635,7 +1592,6 @@ Final pipeline:
 DevSecOps extends the DevOps workflow to include automated security processes and tooling, giving you continuous and frictionless security testing that replaces disruptive bottlenecks at the end of the development process. This tighter integration also leads to better security outcomes, such as fewer vulnerabilities and enhanced compliance.
 
 **Image Source** : https://blog.sqreen.com/secdevops/
-![Conclusion](./img/gitlab_conclusion.jpg)
 
 # Reference
 - https://www.atlassian.com/devops
