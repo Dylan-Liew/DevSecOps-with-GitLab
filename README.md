@@ -1,5 +1,6 @@
 # NYP - IT3531: Final Year Project - Secure DevOps
-*Dylan Liew Hock Cong, 190312k*
+*Dylan Liew Hock Cong*
+My GitLab: [LINK](https://gitlab.com/Dylan-Liew)
 - [NYP - IT3531: Final Year Project - Secure DevOps](#nyp---it3531-final-year-project---secure-devops)
 - [Introduction](#introduction)
   - [Project Background](#project-background)
