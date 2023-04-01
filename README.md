@@ -1,5 +1,5 @@
 # NYP - IT3531: Final Year Project - Secure DevOps
-*My GitLab: [Link](https://gitlab.com/Dylan-Liew)*
+*Dylan-Liew GitLab : [Link](https://gitlab.com/Dylan-Liew)*
 
 - [NYP - IT3531: Final Year Project - Secure DevOps](#nyp---it3531-final-year-project---secure-devops)
 - [Introduction](#introduction)
