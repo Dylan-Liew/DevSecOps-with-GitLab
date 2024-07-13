@@ -91,7 +91,6 @@ DevSecOps extends the DevOps workflow to include automated security processes an
     - DevSecOps allows for much smoother scaling of process
 
 ## Continuous Integration, Continuous Delivery & Continuous Deployment (CI/CD)
-![CI/CD Pipeline](https://docs.gitlab.com/ee/ci/introduction/img/gitlab_workflow_example_11_9.png)
 
 CI/CD is a method to frequently deliver apps to customers by introducing automation into the stages of app development. The main concepts attributed to CI/CD are continuous integration, continuous delivery, and continuous deployment. CI/CD is a solution to the problems integrating new code can cause for development and operations teams (AKA "integration hell").
 
@@ -964,7 +963,7 @@ To configure API fuzzing to use a Postman Collection file:
 
         {
         "headers" : {
-          "Authorization" : "Bearer dXNlcm5hbWU6cGFzc3dvcmQ="
+          "Authorization" : "Bearer xxxxxxxxxxxxxxxxxxxxx"
             }
         }
     
@@ -1226,9 +1225,6 @@ If you’re using GitLab CI/CD, you can use dependency scanning to analyze your 
       ### Dependency Scannig Variables
       # DS_DEFAULT_ANALYZERS: "gemnasium"
       DS_DEFAULT_ANALYZERS: "retire.js"
-
-The result of dependency scanning is shown below:
-![Dependency Scan](./img/gitlab_dependency_scanning.png)
 
 For information, you can click [**HERE**](https://docs.gitlab.com/ee/user/application_security/dependency_scanning).
 
